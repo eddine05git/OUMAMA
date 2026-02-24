@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love - Imama ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    top: 20%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff4da6; }
+    to { text-shadow: 0 0 25px #ff99cc; }
+}
+
+p {
+    font-size: 1.4em;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4da6;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff99cc;
+}
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+    <h1>Imama ❤️</h1>
+
+    <p id="mainText">
+        From the very first moment I saw you, I knew deep in my heart 
+        that you were the one I would spend the rest of my life with.
+    </p>
+
+    <p id="message">
+        You are the most beautiful part of my life.
+    </p>
+
+    <button onclick="changeMessage()">Click for a Surprise 💌</button>
+</div>
+
+<script>
+const messages = [
+    "You are my peace in this chaotic world.",
+    "Loving you is the best decision I ever made.",
+    "Your smile is my favorite place.",
+    "Every day with you is a blessing.",
+    "You are not just my love, you are my home."
+];
+
+function changeMessage() {
+    const random = Math.floor(Math.random() * messages.length);
+    document.getElementById("message").innerText = messages[random];
+}
+</script>
+
+</body>
+</html>
